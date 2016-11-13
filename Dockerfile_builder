@@ -2,15 +2,15 @@ FROM alpine:3.4
 MAINTAINER sparklyballs
 
 # copy build script
-COPY build-scripts/ /
+COPY root/ /
 
 # install packages
 RUN \
  apk add --no-cache \
 	bash \
-	bzip2 \
 	coreutils \
 	git \
+	gzip \
 	imagemagick \
 	librsvg \
 	tar \
