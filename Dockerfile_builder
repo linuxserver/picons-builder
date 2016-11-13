@@ -2,7 +2,7 @@ FROM alpine:3.4
 MAINTAINER sparklyballs
 
 # copy build script
-COPY build-picons.sh /
+COPY build-scripts/ /
 
 # install packages
 RUN \
