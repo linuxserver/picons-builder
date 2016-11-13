@@ -21,4 +21,4 @@ tar xf \
 
 # repack picons in path-free tar in picons folder and chmod output contents
 tar -cjf /picons/picons.tar.bz2 -C /usr/src/temp-output .
-chmod -R 777 /usr/src/temp-output
+chmod -R 777 /picons
