@@ -19,5 +19,6 @@ tar xf \
 	/usr/src/picons-source/build-output/binaries-snp-full/*hardlink*.tar.bz2 -C \
 	/usr/src/temp-output --strip-components=1
 
-# repack picons in path-free tar in picons folder
+# repack picons in path-free tar in picons folder and chmod output contents
 tar -cjf /picons/picons.tar.bz2 -C /usr/src/temp-output .
+chmod -R 777 /usr/src/temp-output
