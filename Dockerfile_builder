@@ -1,0 +1,27 @@
+FROM alpine:3.4
+MAINTAINER sparklyballs
+
+# copy build script
+COPY build-picons.sh /
+
+# install packages
+RUN \
+ apk add --no-cache \
+	bash \
+	bzip2 \
+	coreutils \
+	git \
+	imagemagick \
+	librsvg \
+	tar \
+	util-linux && \
+
+ apk add --no-cache \
+	--repository http://nl.alpinelinux.org/alpine/edge/testing \
+	pngquant
+
+# build picons
+RUN \
+ /bin/bash /build-picons.sh
+
+CMD ["cp", "-avr", "/usr/src/picons-source/build-output", "/mnt/"]
