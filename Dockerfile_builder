@@ -23,7 +23,9 @@ COPY root/ /
 
 # build picons
 RUN \
- mkdir -p /picons && \
+ mkdir -p \
+	/picons \
+	/usr/src/temp-output && \
  /bin/bash /build-picons.sh
 
-CMD ["cp", "-avr", "/picons", "/mnt/"]
+CMD ["cp", "-avr", "/picons/picons.tar.bz2", "/mnt/"]
