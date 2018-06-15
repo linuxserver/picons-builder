@@ -11,12 +11,9 @@ RUN \
 	gzip \
 	imagemagick \
 	librsvg \
+	pngquant \
 	tar \
-	util-linux && \
-
- apk add --no-cache \
-	--repository http://nl.alpinelinux.org/alpine/edge/community \
-	pngquant
+	util-linux
 
 # copy build script
 COPY root/ /

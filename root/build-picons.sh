@@ -5,7 +5,7 @@
 rm -rf /tmp/*
 
 # clone picon repository
-git clone https://github.com/picons/picons-source.git /usr/src/picons-source
+git clone https://gitlab.com/picons/picons.git /usr/src/picons-source
 
 # copy backgrounds.conf to build-input
 cp /backgrounds.conf /usr/src/picons-source/build-input/
