@@ -23,7 +23,7 @@ RUN \
   cd /usr/src/picons-source && \
   ./2-build-picons.sh snp-full && \
   tar xf \
-    /usr/src/picons-source/build-output/binaries-snp-full/*hardlink*.tar.bz2 -C \
+    /usr/src/picons-source/build-output/binaries-snp-full/*hardlink*.tar.xz -C \
     /usr/src/temp-output --strip-components=1 && \
   tar -cjf /picons/picons.tar.bz2 -C /usr/src/temp-output . && \
   chmod -R 777 /picons
