@@ -18,11 +18,11 @@ jobs:
         run: |
           docker tag ghcr.io/linuxserver/picons-builder:latest ghcr.io/linuxserver/picons-builder:$(date +%F)
       - name: Login to GitHub Container Registry
-        if: ${{ github.ref == format('refs/heads/master') && env.CR_USER && env.CR_PAT }}
+        if: ${{ github.ref == format('refs/heads/master') }}
         run: |
           echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u ${{ secrets.CR_USER }} --password-stdin
       - name: Push tags to GitHub Container Registry
-        if: ${{ github.ref == format('refs/heads/master') && env.CR_USER && env.CR_PAT }}
+        if: ${{ github.ref == format('refs/heads/master') }}
         run: |
           docker push ghcr.io/linuxserver/picons-builder:$(date +%F)
           docker push ghcr.io/linuxserver/picons-builder:latest
