@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:3.15 AS builder
+FROM ghcr.io/linuxserver/baseimage-alpine:3.17 AS builder
 
 COPY root/ /
 
