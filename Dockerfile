@@ -12,6 +12,7 @@ RUN \
     imagemagick \
     librsvg \
     pngquant \
+    rsvg-convert \
     tar \
     util-linux && \
   mkdir -p \
