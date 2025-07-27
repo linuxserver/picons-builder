@@ -2,7 +2,6 @@
 
 [linuxserverurl]: https://linuxserver.io
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
-	
 
 <!--- Before submitting a pull request please check the following -->
 
@@ -11,5 +10,4 @@
 <!---  You have included links to any files / patches etc your PR may be using in the body of the PR commit message -->
 <!---  -->
 
-##  Thanks, team linuxserver.io
-
+## Thanks, team linuxserver.io
