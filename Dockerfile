@@ -21,12 +21,12 @@ RUN \
     /picons \
     /usr/src/temp-output && \
   rm -rf /tmp/* && \
-  git clone https://github.com/picons/picons /usr/src/picons-source && \
+  git clone --depth 1 https://github.com/picons/picons /usr/src/picons-source && \
   cp /backgrounds.conf /usr/src/picons-source/build-input/ && \
   cd /usr/src/picons-source && \
-  ./2-build-picons.sh snp-full && \
+  ./2-build-picons.sh utf8snp-full && \
   tar xf \
-    /usr/src/picons-source/build-output/binaries-snp-full/*hardlink*.tar.xz -C \
+    /usr/src/picons-source/build-output/binaries-*/*hardlink*.tar.bz2 -C \
     /usr/src/temp-output --strip-components=1 && \
   tar -cjf /picons/picons.tar.bz2 -C /usr/src/temp-output . && \
   chmod -R 777 /picons
